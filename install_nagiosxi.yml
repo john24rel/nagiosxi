@@ -1,0 +1,9 @@
+- hosts: all
+  tasks:
+  roles:
+    - ansible-role-prerequisites
+    - ansible-role-apache
+    - ansible-role-certbot
+    - ansible-role-apache-proxy 
+    - ansible_role_nagiosxi
+ 

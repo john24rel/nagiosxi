@@ -1,6 +1,3 @@
----
-# tasks file for ansible-role-prerequisites
-
 - name: Install Prerequisites
   yum:
     name:
@@ -8,6 +5,8 @@
     - net-snmp
     - git
     - "{{repo_nagios}}"
+    - cronie
+    - epel-release
     update_cache: yes
 
 - name: Set hostname
