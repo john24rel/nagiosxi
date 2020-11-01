@@ -1,18 +1,19 @@
- server_name: "{{ inventory_hostname }}"
- apache_create_vhosts: false
- apache_remove_default_vhost: true
- certbot_admin_email: "john.oshi44@gmail.com"
- certbot_create_if_missing: true
- certbot_create_standalone_stop_services:
- - httpd
- certbot_certs:
- - domains: 
- - "or.johnoshikoya.com"
- apache_server_name: "or.johnoshikoya.com"
- apache_default_admin_email: "john.oshi44@gmail.com"
- apache_copy_ssl_files: false
- apache_ssl_cert_file_location: "/etc/letsencrypt/live/{{ apache_server_name }}/fullchain.pem"
- apache_ssl_cert_key_location: "/etc/letsencrypt/live/{{ apache_server_name }}/privkey.pem"
- apache_proxy_host: "34.207.119.77"
- apache_proxy_port: 443
- default_context_path: "/"
+    server_name: "{{ inventory_hostname }}"
+    apache_create_vhosts: true
+    apache_remove_default_vhost: true
+    certbot_admin_email: "john.oshi447@gmail.com"
+    certbot_create_if_missing: true
+    certbot_create_standalone_stop_services:
+    - httpd
+    certbot_certs:
+    - domains:
+      - "test.johnoshikoya.com"
+    apache_server_name: "test.johnoshikoya.com"
+    apache_default_admin_email: "john.oshi447@gmail.com"
+    apache_copy_ssl_files: false
+    apache_ssl_cert_file_location: "/etc/letsencrypt/live/{{ apache_server_name }}/fullchain.pem"
+    apache_ssl_cert_key_location: "/etc/letsencrypt/live/{{ apache_server_name }}/privkey.pem"
+    apache_proxy_host: "localhost"
+    apache_proxy_port: 80
+    default_context_path: "/"
+    
