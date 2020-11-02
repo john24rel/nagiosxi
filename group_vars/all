@@ -7,8 +7,8 @@
     - httpd
     certbot_certs:
     - domains:
-      - "test.johnoshikoya.com"
-    apache_server_name: "test.johnoshikoya.com"
+      - "nagiosxi.johnoshikoya.com"
+    apache_server_name: "nagiosxi.johnoshikoya.com"
     apache_default_admin_email: "john.oshi@gmail.com"
     apache_copy_ssl_files: false
     apache_ssl_cert_file_location: "/etc/letsencrypt/live/{{ apache_server_name }}/fullchain.pem"
