@@ -1,7 +1,7 @@
     server_name: "{{ inventory_hostname }}"
     apache_create_vhosts: true
     apache_remove_default_vhost: true
-    certbot_admin_email: "john.oshi447@gmail.com"
+    certbot_admin_email: "john.oshi@gmail.com"
     certbot_create_if_missing: true
     certbot_create_standalone_stop_services:
     - httpd
@@ -9,7 +9,7 @@
     - domains:
       - "test.johnoshikoya.com"
     apache_server_name: "test.johnoshikoya.com"
-    apache_default_admin_email: "john.oshi447@gmail.com"
+    apache_default_admin_email: "john.oshi@gmail.com"
     apache_copy_ssl_files: false
     apache_ssl_cert_file_location: "/etc/letsencrypt/live/{{ apache_server_name }}/fullchain.pem"
     apache_ssl_cert_key_location: "/etc/letsencrypt/live/{{ apache_server_name }}/privkey.pem"
