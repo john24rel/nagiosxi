@@ -14,7 +14,7 @@
     chdir: /etc/snmp
 
 - name: copy snmpd.conf
-  shell: echo "rocommunity public" > snmpd.conf | echo "syslocation here" >> snmpd.conf | echo "syscontact root@localhost" >> snmpd.conf
+  shell: echo "rocommunity public  \nsyslocation here   \nsyscontact root@localhost" > snmpd.conf 
   args:
     chdir: /etc/snmp
 
